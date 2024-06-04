@@ -1,12 +1,15 @@
-import Link from 'next/link'
+import Head from 'next/head'
+import styles from '../styles/home.module.css'
 
 export default function Home() {
-    return (
-        <ul>
-            <li><Link href="/login">Login</Link></li>
-            <li><Link href="/people">Pessoas</Link></li>
-            <li><Link href="/places">Lugares</Link></li>
-            <li><Link href="/events">Eventos</Link></li>
-        </ul>
-    )
+  return (
+      <div className={styles.container}>
+        <Head>
+          <title>Home</title>
+          <meta name="description" content="Home Screen" />
+        </Head>
+
+
+      </div>
+  );
 }
