@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/home.module.css'
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
@@ -7,9 +7,13 @@ export default function Home() {
         <Head>
           <title>Home</title>
           <meta name="description" content="Home Screen" />
+          <link rel="icon" href="/logo.png" />
         </Head>
 
+        <nav className={styles.navbar}>
+
+        </nav>
 
       </div>
-  );
+  )
 }
