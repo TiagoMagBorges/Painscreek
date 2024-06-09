@@ -11,7 +11,7 @@ export default function Home() {
         </Head>
 
         <nav className={styles.navbar}>
-
+          <a href="#" onClick={() => window.location.href = '/login'}>Login</a>
         </nav>
 
       </div>
