@@ -1,0 +1,128 @@
+.container {
+    display: flex;
+    width: 100%;
+    background-color: #000000f5;
+  }
+  
+  .navbar {
+    width: 100%;
+    margin-top: 50px;
+    transition: background-color 0.3s;
+  }
+
+  .transparent {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .main {
+    flex: 1; 
+    background-image: url('/loginboard.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: calc(100vh - 48px); /* Ajusta a altura para ocupar o restante da tela até a navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .formboxlogin {
+    background: rgb(64, 60, 44, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    max-height: 400px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  
+  .formboxlogin h2 {
+    margin-bottom: 20px;
+    margin-top: -1px;
+    color: #ffffff;
+    font-size: 30px;
+  }
+  
+  .inputbox {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .inputbox input {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    background-color: #8C876C;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  
+  .inputbox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    transition: 0.3s;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .inputbox input:focus ~ label,
+  .inputbox input:valid ~ label {
+    top: -30px;
+    font-size: 14px;
+  }
+  
+  .rememberforgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .rememberforgot a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .rememberforgot a:hover {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    width: 80%;
+    padding: 10px;
+    background-color: #bc0606; 
+    border: none;
+    color: #ffffff; 
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .btn:hover {
+    background-color: #F20505;
+  }
+  
+  .loginregister {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .loginregister a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .loginregister a:hover {
+    text-decoration: underline;
+  }
+  
