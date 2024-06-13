@@ -20,42 +20,64 @@ export default function Login() {
 
     return (
         <>
+            <Head>
+                <title>Login</title>
+                <meta name="description" content="Home Screen" />
+                <link rel="icon" href="/logo.png" />
+            </Head>
+
             <div className={`${styles.container} ${navbarTransparent ? styles.transparentNavbar : ''}`}>
-                <Head>
-                    <title>Home</title>
-                    <meta name="description" content="Home Screen" />
-                    <link rel="icon" href="/logo.png" />
-                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-                </Head>
 
                 <nav className={`${styles.navbar} ${navbarTransparent ? styles.transparent : ''}`}>
                     
                 </nav>
+
             </div>
 
             <div className={styles.main}>
-                <div className={styles.formboxlogin}>
+
+                <div className={styles.formboxLogin}>
+
                 <h2>Login</h2>
+
                     <form className={styles.frmLogin}>
+
                         <div className={styles.inputbox}>
+
                             <input type="text" name="txtemail" required />
+
                             <label>Email</label>
+
                         </div>
+
                         <div className={styles.inputbox}>
+
                             <input type="password" name="txtpassword" required />
+
                             <label>Senha</label>
+
                         </div>
+
                         <div className={styles.rememberforgot}>
+
                             <label><input type="checkbox" />Lembrar-me</label>
+
                             <a href="#">Esqueceu a senha?</a>
+
                         </div>
+
                         <button type="submit" className={styles.btn}>Logar</button>
+
                         <div className={styles.loginregister}>
+
                             <p>Não possui uma conta? <a href="#" className={styles.registerlink}>Registrar</a></p>
+
                         </div>
+
                     </form>
+
                 </div>
+
             </div>
         </>
     )
