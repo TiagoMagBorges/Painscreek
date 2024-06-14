@@ -10,17 +10,14 @@
   transition: background-color 0.3s;
 }
 
-.transparent {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
 .main {
   flex: 1;
   background-image: url('/loginBackground.png');
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100vh - 48px); /* Ajusta a altura para ocupar o restante da tela até a navbar */
+  height: calc(100vh - 0px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,25 +25,30 @@
 
 .formboxLogin {
   background: rgb(64, 60, 44, 0.9);
-  padding: 40px;
-  border-radius: 12px;
+  padding: 45px;
+  border-radius: 12px 40px 40px 40px;
   max-width: 500px;
-  max-height: 400px;
+  max-height: 500px;
   width: 100%;
   text-align: center;
-  margin-bottom: 120px;
+  border-style: solid;
+  border-color: #8C876C;
+  border-width: 3px;
 }
 
-.formboxlogin h2 {
-  margin-bottom: 20px;
-  margin-top: -1px;
-  color: #ffffff;
+.formboxLogin:hover{
+  background: rgb(64, 60, 44, 1);
+}
+
+.formboxLogin h2 {
+  color: #000000;
   font-size: 30px;
 }
 
 .inputbox {
   position: relative;
   margin-bottom: 30px;
+  margin-top: 40px;
 }
 
 .inputbox input {
@@ -82,6 +84,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  color: #000000;
 }
 
 .rememberforgot a {
@@ -105,7 +108,6 @@
   transition: background-color 0.3s;
   border-radius: 10px;
   font-weight: 600;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .btn:hover {
@@ -114,7 +116,8 @@
 
 .loginregister {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 15px;
+  color: #000000;
 }
 
 .loginregister a {

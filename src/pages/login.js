@@ -3,20 +3,6 @@ import Head from 'next/head'
 import styles from "../styles/login.module.css"
 
 export default function Login() {
-    const [navbarTransparent, setNavbarTransparent] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setNavbarTransparent(true);
-            } else {
-                setNavbarTransparent(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     return (
         <>
@@ -25,14 +11,6 @@ export default function Login() {
                 <meta name="description" content="Home Screen" />
                 <link rel="icon" href="/logo.png" />
             </Head>
-
-            <div className={`${styles.container} ${navbarTransparent ? styles.transparentNavbar : ''}`}>
-
-                <nav className={`${styles.navbar} ${navbarTransparent ? styles.transparent : ''}`}>
-                    
-                </nav>
-
-            </div>
 
             <div className={styles.main}>
 

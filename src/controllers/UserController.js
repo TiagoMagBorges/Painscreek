@@ -1,5 +1,5 @@
 export default class UserController {
 
-  static currentUser = 1
+  static currentUser = null
 
 }
