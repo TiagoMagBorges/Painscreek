@@ -19,13 +19,13 @@ export default function Login() {
     const user = UsersMock.find(user => user.username === username && user.password === password)
     if (!user) {
       alert('Usuário ou senha não encontrados')
-      return;
+      return
     }
     setUsername('')
     setPassword('')
     UserController.currentUser = user
     router.push('/')
-  };
+  }
 
   // TODO: Use bootstrap to handle sizing, and only use styles/login.module.css to change colors and shapes
 
