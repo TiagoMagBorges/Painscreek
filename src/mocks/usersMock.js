@@ -1,6 +1,6 @@
 let data;
 export default data = [
-  {user: 'tiago', password: '123'},
-  {user: 'joao', password: '321'},
-  {user: 'piaba', password: '456'}
+  {username: 'tiago@gmail.com', password: '123'},
+  {username: 'joao@gmail.com', password: '321'},
+  {username: 'piaba@gmail.com', password: '456'}
 ]
