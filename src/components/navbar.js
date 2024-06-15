@@ -58,13 +58,25 @@ export default function Navbar() {
 
                       </li>
 
-                      <li className="nav-item">
+                      <li className="nav-item dropdown">
 
-                        <Link className="nav-link text-light" aria-current="page" href="/profile">
+                        <a className="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Minha Conta
-                        </Link>
+                        </a>
 
+                        <ul className="dropdown-menu">
+
+                          <li>
+                            <Link className="dropdown-item" href="#">Perfil</Link>
+                          </li>
+                          <li>
+                            <Link className="dropdown-item" href="#">Sair</Link>
+                          </li>
+
+                        </ul>
                       </li>
+
+
                     </>
                 }
               </ul>
