@@ -1,8 +1,17 @@
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
 import UserController from '@/controllers/UserController'
 
 export default function Navbar() {
+
+  const router = useRouter()
+
+  const handleLogout = () => {
+    UserController.currentUser = null
+    router.reload()
+  }
+
   return (
       <>
         <nav className="navbar navbar-expand-lg bg-dark">
@@ -70,12 +79,11 @@ export default function Navbar() {
                             <Link className="dropdown-item" href="#">Perfil</Link>
                           </li>
                           <li>
-                            <Link className="dropdown-item" href="#">Sair</Link>
+                            <a className="dropdown-item" href="#" onClick={handleLogout}>Sair</a>
                           </li>
 
                         </ul>
                       </li>
-
 
                     </>
                 }
