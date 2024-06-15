@@ -1,62 +1,106 @@
-import { useEffect, useState } from 'react';
+import {useState} from 'react'
+import {useRouter} from 'next/router'
 import Head from 'next/head'
-import styles from "../styles/login.module.css"
+import styles from '../styles/login.module.css'
+import UsersMock from '@/mocks/usersMock'
+import UserController from '@/controllers/UserController'
 
 export default function Login() {
 
-    return (
-        <>
-            <Head>
-                <title>Login</title>
-                <meta name="description" content="Home Screen" />
-                <link rel="icon" href="/logo.png" />
-            </Head>
+  const router = useRouter()
 
-            <div className={styles.main}>
+  const [username, setUsername] = useState('')
 
-                <div className={styles.formboxLogin}>
+  const [password, setPassword] = useState('')
 
-                <h2>Login</h2>
 
-                    <form className={styles.frmLogin}>
+  const handleLogin = (e) => {
+    e.preventDefault()
+    const user = UsersMock.find(user => user.username === username && user.password === password)
+    if (!user) {
+      alert('Usuário ou senha não encontrados')
+      return;
+    }
+    setUsername('')
+    setPassword('')
+    UserController.currentUser = user
+    router.push('/')
+  };
 
-                        <div className={styles.inputbox}>
+  // TODO: Use bootstrap to handle sizing, and only use styles/login.module.css to change colors and shapes
 
-                            <input type="text" name="txtemail" required />
+  return (
+      <>
+        <Head>
+          <title>Login</title>
+          <meta name="description" content="Home Screen"/>
+          <link rel="icon" href="/logo.png"/>
+        </Head>
 
-                            <label>Email</label>
+        <div className={styles.main}>
 
-                        </div>
+          <div className={styles.formboxLogin}>
 
-                        <div className={styles.inputbox}>
+            <h2>Login</h2>
 
-                            <input type="password" name="txtpassword" required />
+            <form className={styles.frmLogin} onSubmit={handleLogin}>
 
-                            <label>Senha</label>
+              <div className={styles.inputbox}>
 
-                        </div>
+                <input
+                    type="email"
+                    name="txtemail"
+                    value={username}
+                    onChange={(text) => setUsername(text.target.value)}
+                    required/>
 
-                        <div className={styles.rememberforgot}>
+                <label>Email</label>
 
-                            <label><input type="checkbox" />Lembrar-me</label>
+              </div>
 
-                            <a href="#">Esqueceu a senha?</a>
+              <div className={styles.inputbox}>
 
-                        </div>
+                <input
+                    type="password"
+                    name="txtpassword"
+                    value={password}
+                    onChange={(text) => setPassword(text.target.value)}
+                    required/>
 
-                        <button type="submit" className={styles.btn}>Logar</button>
+                <label>Senha</label>
 
-                        <div className={styles.loginregister}>
+              </div>
 
-                            <p>Não possui uma conta? <a href="#" className={styles.registerlink}>Registrar</a></p>
+              <div className={styles.rememberforgot}>
 
-                        </div>
+                <label>
+                  <input type="checkbox"/> Lembrar-me
+                </label>
 
-                    </form>
+                <a href="#">Esqueceu a senha?</a>
 
-                </div>
+              </div>
 
-            </div>
-        </>
-    )
+              <button type="submit" className={styles.btn}>
+                Logar
+              </button>
+
+              <div className={styles.loginregister}>
+
+                <p>
+                  Não possui uma conta?{' '}
+                  <a href="#" className={styles.registerlink}>
+                    Registrar
+                  </a>
+                </p>
+
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+      </>
+  )
 }
