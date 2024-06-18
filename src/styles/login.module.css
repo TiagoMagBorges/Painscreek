@@ -23,7 +23,7 @@
   justify-content: center;
 }
 
-.formboxLogin {
+.formBoxLogin {
   background: rgb(64, 60, 44, 0.9);
   padding: 45px;
   border-radius: 12px 40px 40px 40px;
@@ -36,13 +36,31 @@
   border-width: 3px;
 }
 
-.formboxLogin:hover{
+.formBoxLogin:hover{
   background: rgb(64, 60, 44, 1);
 }
 
-.formboxLogin h2 {
+.formBoxLoginClose {
+  margin-top: -45px;
+  margin-left: -45px;
+  width: 44px;
+  height: 44px;
+  background: #8C876C;
+  font-size: 1.9em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 12px;
+  cursor: pointer;
+  z-index: 1;  
+}
+
+
+.formBoxLogin h2 {
   color: #000000;
   font-size: 30px;
+  margin-top: 20px;
 }
 
 .inputbox {
@@ -79,7 +97,7 @@
   font-size: 14px;
 }
 
-.rememberforgot {
+.rememberForgot {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,13 +105,13 @@
   color: #000000;
 }
 
-.rememberforgot a {
+.rememberForgot a {
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
 }
 
-.rememberforgot a:hover {
+.rememberForgot a:hover {
   text-decoration: underline;
 }
 
@@ -114,18 +132,18 @@
   background-color: #F20505;
 }
 
-.loginregister {
+.loginRegister {
   margin-top: 20px;
   font-size: 15px;
   color: #000000;
 }
 
-.loginregister a {
+.loginRegister a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.loginregister a:hover {
+.loginRegister a:hover {
   text-decoration: underline;
 }
   
