@@ -4,6 +4,7 @@ import Head from 'next/head'
 import styles from '../styles/login.module.css'
 import UsersMock from '@/mocks/usersMock'
 import UserController from '@/controllers/UserController'
+import Link from 'next/link'
 
 export default function Login() {
 
@@ -35,18 +36,25 @@ export default function Login() {
           <title>Login</title>
           <meta name="description" content="Home Screen"/>
           <link rel="icon" href="/logo.png"/>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </Head>
 
         <div className={styles.main}>
 
-          <div className={styles.formboxLogin}>
+          <div className={styles.formBoxLogin}>
 
+            <Link className={styles.formBoxLoginClose} href="#">
+              <span>
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </span>
+            </Link>  
             <h2>Login</h2>
 
-            <form className={styles.frmLogin} onSubmit={handleLogin}>
-
+            <form onSubmit={handleLogin}>
+              
               <div className={styles.inputbox}>
-
+                
                 <input
                     type="email"
                     name="txtemail"
@@ -71,7 +79,7 @@ export default function Login() {
 
               </div>
 
-              <div className={styles.rememberforgot}>
+              <div className={styles.rememberForgot}>
 
                 <label>
                   <input type="checkbox"/> Lembrar-me
@@ -85,11 +93,11 @@ export default function Login() {
                 Logar
               </button>
 
-              <div className={styles.loginregister}>
+              <div className={styles.loginRegister}>
 
                 <p>
                   Não possui uma conta?{' '}
-                  <a href="#" className={styles.registerlink}>
+                  <a href="#" >
                     Registrar
                   </a>
                 </p>
@@ -101,6 +109,7 @@ export default function Login() {
           </div>
 
         </div>
+
       </>
   )
 }
